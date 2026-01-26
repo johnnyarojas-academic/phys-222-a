@@ -1,0 +1,419 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 9
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+S3.2 Difraction
+\end_layout
+
+\begin_layout Section*
+S3.3 Angular Resolution
+\end_layout
+
+\begin_layout Section*
+S3.6 Wave and Particle Models of Light
+\end_layout
+
+\begin_layout Section*
+23.6 Polarization and Refraction
+\end_layout
+
+\begin_layout Section*
+23.8,
+ 23.9,
+ 23.10 Geometric Optics
+\end_layout
+
+\begin_layout Subsection*
+1.
+ Specular Reflection and Retroreflection
+\end_layout
+
+\begin_layout Standard
+Occurs when the angle of incidence and the angle of reflection are equal to each other,
+ or:
+ 
+\begin_inset Formula $\theta_{i}=\theta_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/johnny/Documents/Physics Cheat Sheet Exam 1/Pasted image.png
+	display false
+	height 4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+2.
+ Snell's Law
+\end_layout
+
+\begin_layout Standard
+Describes the 
+\series bold
+relationship 
+\series default
+between the angles of 
+\series bold
+incidence
+\series default
+ and 
+\series bold
+refraction
+\series default
+,
+ when referring to light passing through a boundary between two different materials that have different index of refraction (IR).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/johnny/Documents/Physics Cheat Sheet Exam 1/Pasted image (2).png
+	display false
+	height 4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the index of refraction for a material is defined by dividing the speed of light by the speed of the of light as it travels through the medium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n=\frac{c}{v}
+\]
+
+\end_inset
+
+where:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ is the index of refrction
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $c$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ is the speed of light
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $v$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ is the speed of the light as it travels through the medium
+\end_layout
+
+\begin_layout Standard
+We can also derivate the following formula by replacing 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\frac{c}{v}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ to get the following version of Snell's Law:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{sin(\theta_{1})}{v_{1}}=\frac{sin(\theta_{2})}{v_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Another part that is also possible to describe is the speed of the light in the medium because it is related to frecuency in this way:
+ 
+\begin_inset Formula $v=f\lambda$
+\end_inset
+
+.
+ Since the frequency of the light is not affected by the medium we can stipulate the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{v_{1}}{v_{2}}=\frac{\lambda_{1}}{\lambda_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if we apply this ratio to Snell's Law we get the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{sin(\theta_{1})}{sin(\theta_{2})}=\frac{\lambda_{1}}{\lambda_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+I verified the equation (it is inversed because of how the index of refraction is defined).
+\end_layout
+
+\begin_layout Subsection*
+3.
+ Apparent Depth
+\end_layout
+
+\begin_layout Standard
+Apparent depth can be calculated by analyzing the trajectory of light rays from the point of view of the observer.
+ The observer sees the object in the direction from which the light arrives,
+ not necessarily from where it originated.
+ To solve these problems,
+ trace the refracted ray at the point of refraction and extend it backward along its direction until it intersects the normal through the object.
+ Or expressed mathematically:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/johnny/Documents/Physics Cheat Sheet Exam 1/Pasted image (3).png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+4.
+ Total Internal Reflection
+\end_layout
+
+\begin_layout Standard
+Total internal reflection is a physics phenomenon where light waves completely reflect back into a medium,
+ such as water or glass,
+ instead of passing into a second medium like air.
+ This occurs when the light hits the boundary at an angle greater than a specific critical angle,
+ and the second medium has a lower refractive index.
+\end_layout
+
+\begin_layout Subsection*
+5.
+ Critical Angle
+\end_layout
+
+\begin_layout Standard
+Can be found by setting the refracted ray to be at an angle of 
+\begin_inset Formula $90\textdegree$
+\end_inset
+
+ to get the following case of Snell's Law:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+sin(\theta_{c})=\frac{n_{2}}{n_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If  
+\begin_inset Formula $θ_{i}<θ_{c}$
+\end_inset
+
+,
+ the incident ray is split,
+ being partly reflected and partly refracted;
+\end_layout
+
+\begin_layout Itemize
+If  
+\begin_inset Formula $θ_{i}>θ_{c}$
+\end_inset
+
+,
+ the incident ray suffers total internal reflection (TIR);
+ none of it is transmitted.
+\end_layout
+
+\begin_layout Subsection*
+Convergents Lenses
+\end_layout
+
+\begin_layout Standard
+Just check this stuff out:
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
