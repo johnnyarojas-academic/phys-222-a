@@ -22,6 +22,59 @@
   {\textbf{Johnny A. Rojas }}\\
 \end{center}
 
-\section{}
+\section*{13. Electric Field}
+Electric fields can be thought as a shared universal plane that is influenced by
+charges and influences charges, similar to gravity and mass.
+
+\subsection*{13.1 Coulomb's Force Law for Point Particles}
+Describes the force behaviour that two charges experience.
+\begin{align*}
+  |\overrightarrow{F}| = F = \frac{1}{4 \pi \epsilon_0} \frac{|Q_1Q_2|}{r^2}
+\end{align*}
+\subsection*{13.3 Definition of Electric Field}
+This equation says that the force on particle 2 is determined by the charge of
+the particle 2 and by the electric field $\overrightarrow{E}_1$ made by all
+other charged particles.
+\begin{align*}
+  \overrightarrow{F}_2 = q_2 \overrightarrow{E}_1
+\end{align*}
+\subsection*{13.4 Electric Field of a Point Particle}
+This equation represents how the electric field is influenced due to a charge,
+with the use of calculus, it can be used to find the contributions of multiple
+electrical fields at a determinent point.
+\begin{align*}
+  \overrightarrow{E}_1 = \frac{1}{4 \pi \epsilon_0} \frac{q_1}{|\overrightarrow{r}|^2} \hat{r}
+\end{align*}
+\subsection*{Continuous Charge Distributions}
+If we have objects in higher dimensions, the charge is distrbuted along them
+continously.
+\begin{itemize}
+  \item Linear Density (1D, for lines and curves), $\lambda= \frac{dQ}{dl}$ in $(C/m)$.
+  \item Surface Density (2D, for planes and surface), $\sigma = \frac{dQ}{dA}$ in $(C/m^2)$
+  \item Volume Density (3D, for solids and volumes), $\rho = \frac{dQ}{dV}$ in $(C/m^3)$.
+\end{itemize}
+Similarly to the total charge for a point is $q$, for the total charge of higher
+dimensional objects is the integral of the charge density times the dimensional
+measure.
+\begin{align*}
+  Q = \int \lambda dl \quad Q = \int \sigma dA \quad Q = \int \rho dV
+\end{align*}
+\subsection*{Electric Field from Continuous Distributions}
+Starting from a point-charge field replace $dQ$ with the appropiate dimensional
+density.
+\begin{align*}
+d\overrightarrow{E} = \frac{1}{4 \pi \epsilon_0} \frac{dQ}{r^2} \hat{r}
+\rightarrow \overrightarrow{E} = \frac{1}{4 \pi \epsilon_0} \int \frac{dQ}{r^2} \hat{r}
+\end{align*}
+\subsubsection*{Infinite Line of Charge (uniform $\lambda$)}
+\begin{align*}
+  E = \frac {\lambda}{2\pi\epsilon_0r}
+\end{align*}
+\subsubsection*{Ring of a Charge (uniform $\lambda$)}
+\begin{align*}
+  E = \frac{1}{4\pi\epsilon_0} \frac{Qr}{(r^2+R^2)^{\frac{3}{2}}} \hat{r}
+\end{align*}
+Note that $R$ is the radious of the ring, $r$ is the distance along the axis
+(perpendicular to the plane of the ring) from the center
 
 \end{document}
