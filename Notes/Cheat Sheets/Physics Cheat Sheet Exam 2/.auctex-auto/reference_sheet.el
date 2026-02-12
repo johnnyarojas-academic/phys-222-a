@@ -6,7 +6,7 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "12pt" "twocolumn")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("inputenc" "utf8") ("geometry" "") ("amsmath" "") ("amssymb" "") ("graphicx" "") ("booktabs" "") ("enumitem" "")))
+                     '(("inputenc" "utf8") ("geometry" "") ("amsmath" "") ("amssymb" "") ("graphicx" "") ("booktabs" "") ("enumitem" "") ("draftwatermark" "")))
    (TeX-run-style-hooks
     "latex2e"
     "article"
@@ -17,6 +17,7 @@
     "amssymb"
     "graphicx"
     "booktabs"
-    "enumitem"))
+    "enumitem"
+    "draftwatermark"))
  :latex)
 
