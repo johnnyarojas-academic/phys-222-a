@@ -1,0 +1,52 @@
+#+title: Integrals
+#+BEGIN_SRC emacs-lisp
+(setq python-shell-interpreter "~/envs/physics/bin/python")
+#+END_SRC
+
+#+RESULTS:
+: ~/envs/physics/bin/python
+
+* Problem 1
+#+BEGIN_SRC python :session physics :results raw
+from sympy import *
+
+def inline(s):
+    return "\[" + s + "\]\n"
+
+x, h, R_1, R_2 = symbols('x h R_1 R_2', real=True, positive=True)
+
+integrand1 = x**2 / (x**2 + h**2)**Rational(3,2)
+result1 = simplify(integrate(integrand1, (x, R_1, R_2)))
+
+
+inline(
+    fr"\int_{{{latex(R_1)}}}^{{{latex(R_2)}}} "
+    fr"{latex(integrand1)} \, dx = {latex(result1)}"
+)
+
+#+END_SRC
+
+#+RESULTS:
+\[\int_{R_{1}}^{R_{2}} \frac{x^{2}}{\left(h^{2} + x^{2}\right)^{\frac{3}{2}}} \, dx = \frac{R_{1}}{\sqrt{R_{1}^{2} + h^{2}}} - \frac{R_{2}}{\sqrt{R_{2}^{2} + h^{2}}} - \operatorname{asinh}{\left(\frac{R_{1}}{h} \right)} + \operatorname{asinh}{\left(\frac{R_{2}}{h} \right)}\]
+\[\int_{R_{1}}^{R_{2}} \frac{h x}{\left(h^{2} + x^{2}\right)^{\frac{3}{2}}} \, dx = - \frac{h}{\sqrt{R_{2}^{2} + h^{2}}} + \frac{h}{\sqrt{R_{1}^{2} + h^{2}}}\]
+* Test Problem
+#+BEGIN_SRC python :session physics :results raw
+from sympy import *
+
+def inline(s):
+    return "\[" + s + "\]\n"
+
+x, h, i, f = symbols('x h i f', real=True, positive=True)
+
+integrand1 = - 1 / x
+result1 = simplify(integrate(integrand1, (x, i, f)))
+
+
+inline(
+    fr"\int_{{{latex(i)}}}^{{{latex(f)}}} "
+    fr"{latex(integrand1)} \, dx = {latex(result1)}"
+)
+
+#+END_SRC
+
+#+RESULTS:
