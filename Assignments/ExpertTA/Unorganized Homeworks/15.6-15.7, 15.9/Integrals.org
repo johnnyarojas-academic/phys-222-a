@@ -5,8 +5,8 @@
 
 #+RESULTS:
 : ~/envs/physics/bin/python
-
-* Problem 1
+* ADJKASDSAS
+#+ Problem 1
 #+BEGIN_SRC python :session physics :results raw
 from sympy import *
 
@@ -27,8 +27,7 @@ inline(
 #+END_SRC
 
 #+RESULTS:
-\[\int_{R_{1}}^{R_{2}} \frac{x^{2}}{\left(h^{2} + x^{2}\right)^{\frac{3}{2}}} \, dx = \frac{R_{1}}{\sqrt{R_{1}^{2} + h^{2}}} - \frac{R_{2}}{\sqrt{R_{2}^{2} + h^{2}}} - \operatorname{asinh}{\left(\frac{R_{1}}{h} \right)} + \operatorname{asinh}{\left(\frac{R_{2}}{h} \right)}\]
-\[\int_{R_{1}}^{R_{2}} \frac{h x}{\left(h^{2} + x^{2}\right)^{\frac{3}{2}}} \, dx = - \frac{h}{\sqrt{R_{2}^{2} + h^{2}}} + \frac{h}{\sqrt{R_{1}^{2} + h^{2}}}\]
+
 * Test Problem
 #+BEGIN_SRC python :session physics :results raw
 from sympy import *

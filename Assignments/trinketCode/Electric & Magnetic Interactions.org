@@ -1,0 +1,15 @@
+#+title: Electric Magnetic Interactions
+#+PROPERTY: header-args:python :session physics :results output
+
+* Experimentation with Electric Field, Rod and Drop Example
+
+
+#+BEGIN_SRC python :python "~/envs/physics/bin/python"
+import vpython as vp
+# Now this will use the Nix environment defined at the bottom
+ball = vp.sphere(pos=vp.vec(0,0,0), radius=1)
+#+END_SRC
+
+#+RESULTS:
+
+#+RESULT
