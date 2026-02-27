@@ -72,7 +72,7 @@
 *** DONE Reading 18.1-18.2 Electrical Fields in Circuits (10)
 *** DONE HW 18.1-18.2
 *** DONE Veritassium references our textbook to school YouTubers
-*** TODO Reading 18.3-18.4 Loop rule (12)
+*** DONE Reading 18.3-18.4 Loop rule (12)
 *** TODO HW 18.3-18.4 aiPlato
 *** TODO Reading 18.5-18.6 Series and Parallel Circuits, Surface Charge (9)
 *** TODO HW 18.5-18.6
