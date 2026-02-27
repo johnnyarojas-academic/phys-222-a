@@ -69,8 +69,8 @@
 *** DONE HW 16.9-16.12
 
 ** TODO Chapter 18: Electric Field and Circuits
-*** TODO Reading 18.1-18.2 Electrical Fields in Circuits (10)
-*** TODO HW 18.1-18.2
+*** DONE Reading 18.1-18.2 Electrical Fields in Circuits (10)
+*** DONE HW 18.1-18.2
 *** DONE Veritassium references our textbook to school YouTubers
 *** TODO Reading 18.3-18.4 Loop rule (12)
 *** TODO HW 18.3-18.4 aiPlato
