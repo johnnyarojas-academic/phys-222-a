@@ -1,0 +1,135 @@
+#+TITLE: Course Schedule: PHYS-222-A Phys for Scientists & Engr II (Winter 2026)
+
+* DONE Electromagnetic Waves and Optics
+** DONE Chapter S3: Waves (especially light waves this semester)
+*** DONE Reading S3.2 Multisource Interference: Diffraction (10)
+*** DONE HW S3.2
+*** DONE Reading S3.3 Angular resolution (13)
+*** DONE Reading S3.6 Wave and Particle Models of Light
+*** DONE HW S3.3, S3.6
+*** DONE aiPlato S3 2 Diffraction
+
+** DONE Chapter 23: Electromagnetic Radiation (light waves)
+*** DONE Reading 23.6 Effects of Radiation on Matter: Polarization and Refraction (12)
+*** DONE HW 23.6-23.7
+*** DONE aiPlato 23 6 to 23 Z
+*** DONE Reading 23.8 Geometric Optics I: Reflection and Refraction (6)
+*** DONE HW 23.8
+*** DONE Reading 23.9 Geometric Optics II: Lenses and Image Formation (6)
+*** DONE HW 23.9
+*** DONE aiPlato 23 9 Geometric optics II lenses and image formation
+*** DONE Reading 23.10 More Image Formation (15)
+*** DONE HW 23.10
+*** DONE Reading 23.1-23.2 Maxwell's Equations, Fields (12)
+*** DONE HW 23.1-23.2
+*** DONE Reading 23.3-23.4 Accelerated Charges Radiate (12)
+*** DONE HW 23.3-23.4
+*** DONE Reading 23.5 Energy and Momentum in Radiation (6)
+*** DONE HW 23.5
+
+* DONE Electric Field and Electric Potential
+** DONE Chapter 13: Electric Field
+*** DONE Reading 13.1-13.3 The Concept of an Electrical Field (13)
+*** DONE HW 13.1-13.3
+*** DONE aiPlato 13 1 The concept of an electric field
+*** DONE Reading 13.4-13.5 C01, Electrical Field of a Dipole (Superposition) (13)
+*** DONE HW 13.4-13.5
+*** DONE Reading 13.6-13.7 Retardation, Relativity, Charge Motion (10)
+*** DONE C1 Electric Field of a Dipole
+
+** DONE Chapter 14: Electric Fields and Matter
+*** DONE Reading 14.1-14.2 What is Charge? Interactions (9)
+*** DONE HW 14.1-14.2
+*** DONE Reading 14.3 Polarization of Atoms and Molecules (12)
+*** DONE HW 14.3 on aiPlato
+*** DONE Reading 14.4-14.5 Charge Motion in Metals, Polarization of Conductors (13)
+
+** DONE Chapter 15: Electric Fields of Distributed Charges
+*** DONE Reading 15.1-15.2 Integration of Charges: Thin Rod (12)
+*** DONE HW 15.1-15.2
+*** DONE Reading 15.3-15.5 Integration Over Charge Distribution (13)
+*** DONE HW 15.3-15.5
+*** DONE Reading 15.6-15.7, 15.9 Spherical Shells (9)
+*** DONE HW 15.6-15.7, 15.9
+*** DONE Reading 15.8 C02 Uniform Charged Rod (6)
+*** DONE HW 15.8
+*** DONE Lab C02 Charged Rod
+
+* TODO Applications of Electric Field
+** DONE Chapter 16: Electric Potential
+*** DONE Reading 16.1-16.3 "Electrical Potential" is "Electric Potential Energy"/charge (13)
+*** DONE HW 16.1-16.3
+*** DONE Reading 16.4-16.5 Potential Diff. in a Non-Uniform E Field, Path Independence (14)
+*** DONE HW 16.4-16.5 on aiPlato
+*** DONE Reading 16.6-16.7 Path Independence (11)
+*** DONE HW 16.6-16.7
+*** DONE Reading 16.8 Computation: V from E (5)
+*** DONE Computation C3
+*** DONE Reading 16.9-16.12 Potential Difference in an Insulator (10)
+*** DONE HW 16.9-16.12
+
+** TODO Chapter 18: Electric Field and Circuits
+*** TODO Reading 18.1-18.2 Electrical Fields in Circuits (10)
+*** TODO HW 18.1-18.2
+*** DONE Veritassium references our textbook to school YouTubers
+*** TODO Reading 18.3-18.4 Loop rule (12)
+*** TODO HW 18.3-18.4 aiPlato
+*** TODO Reading 18.5-18.6 Series and Parallel Circuits, Surface Charge (9)
+*** TODO HW 18.5-18.6
+
+** TODO Chapter 19: Resistors
+*** TODO Reading 19.1-19.2 Resistors in Series and in Parallel (10)
+*** TODO HW 19.1-19.2
+*** TODO Reading 19.3-19.5 Power in Circuits, Measurements (9)
+*** TODO HW 19.3-19.5
+*** TODO Reading 19.6 Capacitors (9)
+*** TODO HW 19.6
+*** TODO Reading 19.7-19.9 RC Circuits, AC/DC Circuits (11)
+*** TODO HW 19.7-19.9
+
+* TODO Magnetic Field
+** TODO Chapter 17: Magnetic Field
+*** TODO Reading 17.1-17.3 Magnetic Field of a Current: Biot-Savart (9)
+*** TODO HW 17.1-17.3
+*** TODO Reading 17.4-17.5 C04 Electron vs Conventional Current, Relativistic Effects (8)
+*** TODO HW 17.4-17.5
+*** TODO Reading 17.6-17.7 More Biot-Savart (10)
+*** TODO HW 17.6-17.7
+*** TODO Reading 17.8-17.10 Magnetism in Atoms, Materials, Quantization (11)
+*** TODO HW 17.8-17.10
+
+** TODO Chapter 20: Magnetic Force
+*** TODO Reading 20.1-20.2 Magnetic Force on a Charge, Wire (11)
+*** TODO HW 20.1-20.2
+*** TODO Reading 20.3-20.4 E and B Force, Hall Effect, Motional EMF (7)
+*** TODO HW 20.3-20.4
+*** TODO Reading 20.5-20.6 Motional EMF, Magnetic Force in a Moving Ref. Frame (13)
+*** TODO HW 20.5-20.6
+*** TODO Reading 20.7-20.8 Torque, Potential Energy of a Magnetic Dipole (10)
+*** TODO HW 20.7-20.8
+*** TODO Reading 20.9-20.10 Motors and Generators, Dielectric Breakdown: Sparks in Air (16)
+*** TODO HW 20.9-20.10
+
+* TODO Electromagnetic Field
+** TODO Chapter 21: Patterns of Field in Space
+*** TODO Reading 21.1-21.2 Patterns of Electric Field, Electric Flux (8)
+*** TODO HW 21.1-21.2
+*** TODO Reading 21.3, *21.8 Gauss's Law (8)
+*** TODO HW 21.3, 21.8
+*** TODO Reading 21.4-21.5 Reasoning From Gauss's Law (8)
+*** TODO HW 21.4-21.5
+*** TODO Reading 21.6-21.7, *21.9 Patterns of Magnetic Field: Ampere's Law (9)
+*** TODO HW 21.6-21.7, *21.9
+
+** TODO Chapter 22: Faraday's Law
+*** TODO Reading 22.1, *22.10 Curly Electric Fields from Time-Dep. Currents (6)
+*** TODO HW 22.1, 22.10
+*** TODO Reading 22.2 Faraday's Law (11)
+*** TODO HW 22.2
+*** TODO Reading 22.3-22.5 Faraday's Law and Motional EMF, Maxwell's Equations (9)
+*** TODO HW 22.3-22.5
+*** TODO Reading 22.6-22.7 Inductors, Inductor Circuits, Some Peculiar Circuits (11)
+*** TODO HW 22.6-22.7
+
+* TODO Chapter S2
+** TODO Reading S2.1 Energy Bands in Solids
