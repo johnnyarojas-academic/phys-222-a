@@ -1,0 +1,20 @@
+#+title: Magnetic Field Integral Calculator
+* Calculating the Magnetic Field on a cable of length a at a distance.
+#+BEGIN_SRC python :python ~/envs/physics/bin/python :session physics :output raw :async
+
+import sympy as sp
+
+x, y, a = sp.symbols('x y a', real=True, positive=True)
+
+integrand = y / (x**2 + y**2)**sp.Rational(3, 2)
+
+sp.latex(y / (x**2 + y**2)**sp.Rational(3, 2))
+#sp.latex(sp.simplify(sp.integrate(integrand, (x, -a/2, a/2))))
+#+END_SRC
+
+#+RESULTS:
+: \frac{y}{\left(x^{2} + y^{2}\right)^{\frac{3}{2}}}
+
+\begin{align*}
+\int_{-a/2}^{a/2} \frac{y}{\left(x^{2} + y^{2}\right)^{\frac{3}{2}}} = \frac{2 a}{y \sqrt{a^{2} + 4 y^{2}}}
+\end{align*}
