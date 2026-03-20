@@ -2,7 +2,7 @@
 
 #+RESULTS:
 : ~/envs/physics/bin/python
-* Jijiji
+* Problem
 #+ Problem 1
 \begin{align*}
 \int_{{{latex(R_1)}}}^{{{latex(R_2)}}}

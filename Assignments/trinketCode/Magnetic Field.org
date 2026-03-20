@@ -15,7 +15,6 @@ where:
 * Computation of the magnetic field
 #+BEGIN_SRC python :python ~/envs/physics/bin/python :session physics :result output :async
 from vpython import *
-
 scene.background = color.white
 
 moofpi = 1e-7     # mu_0 Over Four Pi
@@ -65,4 +64,4 @@ while t < dt * 300:
 #+END_SRC
 
 #+RESULTS:
-: /tmp/babel-kKmXnk/python-ctxeUQ
+: None
