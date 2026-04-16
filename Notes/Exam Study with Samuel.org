@@ -1,0 +1,43 @@
+#+title: Exam Study With Samuel
+
+
+* Finding the magnetic field due to a current line
+#+BEGIN_SRC python :python ~/envs/physics/bin/python :session math :results output :async
+from sympy import *
+
+import sympy as sp
+
+# Define symbols
+x, d = sp.symbols('x d', real=True, positive=True)
+
+# Position vector from wire element to field point: r_vec = (x, d, 0)
+# (Here x is the source coordinate, and d is the perpendicular distance)
+r_vec = sp.Matrix([x, d, 0])
+
+# Line element vector: dl = dx * x_hat = (dx, 0, 0)
+# We factor out dx and work with the integrand vector
+dl_vec = sp.Matrix([1, 0, 0])  # coefficients; the dx is the integration variable
+
+# Magnitude of r
+r_mag = sp.sqrt(x**2 + d**2)
+
+# Cross product: dl x r_vec
+cross = dl_vec.cross(r_vec)
+print("Cross product (dl × r):", cross.T)
+
+# Full integrand: (dl × r_vec) / |r|^3
+integrand = cross / r_mag**3
+print("\nIntegrand vector:")
+for i, component in enumerate(['x', 'y', 'z']):
+    print(f"  {component}-component: {integrand[i]}")
+
+# Integrate each component
+result = sp.Matrix([
+    sp.integrate(integrand[i], x) for i in range(3)
+])
+
+print("\nIndefinite integral result:")
+for i, component in enumerate(['x', 'y', 'z']):
+    print(f"  {component}-component: {sp.simplify(result[i])}")
+
+#+END_SRC

@@ -51,3 +51,19 @@ Suppose that each atom has one unpaired electroc that orbits the nucleus along a
 \begin{align*}
 \mu = I \cdot A
 \end{align*}
+
+
+* Theory
+
+An electrical circuit consisting of a resistor and a capacitor---commonly 
+referred to as an RC circuit---exhibits a fundamentally different behavior 
+from a purely resistive circuit. At the heart of this difference is the 
+capacitor's ability to store charge on its plates. For a capacitor subjected 
+to an electric potential difference $V$, the relationship between the stored 
+charge $Q$ and the voltage is given by:
+
+\begin{align*}
+    Q = CV
+\end{align*}
+
+
