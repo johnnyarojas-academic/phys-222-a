@@ -1,0 +1,10 @@
+#+TITLE: Classroom Notes
+
+\begin{align*}
+\oint \vec{E} \cdot \hat{n} dA = \frac{q}{\epsilon_0}
+\end{align*}
+
+\begin{align*}
+\oint \vec{B} \cdot \hat{n} dA = \mu_0 N = 0
+\end{align*}
+

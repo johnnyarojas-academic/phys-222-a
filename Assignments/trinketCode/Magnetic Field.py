@@ -1,0 +1,47 @@
+from vpython import *
+
+scene.background = color.white
+
+moofpi = 1e-7     # mu_0 Over Four Pi
+q = 1.6e-19
+
+typical_distance = 10e-8
+typical_B = 10e-12
+
+particle = sphere(pos=vector(-10e-7,0,0), radius=2e-8, color=color.yellow, r=vec(0,0,0))
+
+particle.v = vector(2e3, 0, 0)
+dt = 3.5e-12
+t = 0
+
+# Define observation point
+obs01 = sphere(pos=vec(0,2e-7, 0), radius=particle.radius, color=color.cyan, visible=True, B=vector(0,0,0))
+obs02 = sphere(pos=vec(0,-2e-7, 0), radius=particle.radius, color=color.cyan, visible=True, B=vector(0,0,0))
+obs03 = sphere(pos=vec(0,0,2e-7), radius=particle.radius, color=color.cyan, visible=True, B=vector(0,0,0))
+obs04 = sphere(pos=vec(0,0,-2e-7), radius=particle.radius, color=color.cyan, visible=True, B=vector(0,0,0))
+obs05 = sphere(pos=vec(5e-7,0,0), radius=particle.radius, color=color.cyan, visible=True, B=vector(0,0,0))
+obs06 = sphere(pos=vec(-5e-7,0,0), radius=particle.radius, color=color.cyan, visible=True, B=vector(0,0,0))
+
+obsList=[obs01,obs02,obs03,obs04,obs05,obs06]
+
+# Scene Settings, Fix Scale, and set a position for the camera
+scene.autoscale = False
+scene.camera.pos = vec(1.1432e-06, 7.04977e-07, 9.07186e-07)
+scene.camera.axis = vec(-1.1432e-06, -7.04977e-07, -9.07186e-07)
+
+r = 0
+while t < dt * 300:
+  rate(30) # n times per second, 60 FPS
+  particle.pos = particle.pos + particle.v * dt
+  t = t + dt
+
+  # Attach the velocity arrow where theb proton is located
+  attach_arrow(particle, "v", scale=typical_distance/mag(particle.v), color=color.green, shaftwidth=0.5 * particle.radius)
+
+  for obs in obsList:
+    obs.r = particle.pos - obs.pos
+    r_hat = hat(obs.r)
+    r_mag = mag(obs.r)
+    obs.B = q * moofpi * (cross(particle.v,r_hat) / r_mag**2)
+    attach_arrow(obs, "r", scale=1, color=color.red, shaftwidth=0.3*particle.radius)
+    attach_arrow(obs, "B", scale=0.05 * typical_distance/typical_B, color=color.cyan, shaftwidth=0.5*particle.radius)

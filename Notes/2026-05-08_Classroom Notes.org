@@ -1,0 +1,73 @@
+#+TITLE: Classroom Notes
+
+\begin{align*}
+\oint \vec{E} \cdot \hat{n} dA = \frac{q}{\epsilon_0}
+\end{align*}
+
+\begin{align*}
+\oint \vec{B} \cdot \hat{n} dA = \mu_0 N = 0
+\end{align*}
+
+
+
+* Path Integrals
+Recall that the path integral is the summation of the approximation of small line segments that add up to get the total length of a parametric curve. The both principles we will study take advantage of this mathematical tool:
+
+ * Ampere's Law
+   
+\begin{align*}
+\oint \vec{B}\cdot d\vec{l} &= \mu_0 \sum I_{\text{enclosed}}
+\end{align*}
+
+ * Faraday's Law
+   
+\begin{align*}
+\oint \vec{E} \cdot d\vec{l} &= 0 \\
+\end{align*}
+
+** Example 1: The magnetic field due to a loop
+Imagine a infinite long wire that has a current going into the screen.
+From Amperes Law:
+
+The circular path the magnetic field follows is related to the current and a constant.
+
+\begin{align*}
+\int \vec{B} (r) \cdot d \vec{l} = \mu_9 I
+\end{align*}
+
+Because the magnetic field is constant around this path we can factor the magnetic field and get the following:
+
+\begin{align*}
+\vec{B} \int (r) \cdot d \vec{l} &= \mu_0 I \\
+\vec{B} 2\pi r &= \mu_o I \\
+\vec{B} &= \frac{\mu_0 I}{2\pi r}
+\end{align*}
+
+** Example 2: The magnetic field due to a half circle
+Lets says you have a half circle and there is a horizontal magnetic field going through it, calculate the line integral of the magnetic field going through it.
+
+\begin{align*}
+B \cdot S = \oint \vec{B} \cdot ds 
+\end{align*}
+
+\begin{align*}
+B \cdot S = \oint (|B|, 0) \cdot (-cos(\theta), sin(\theta)) d\theta
+\end{align*}
+
+\begin{align*}
+B \cdot S = \oint_{0}_{}^{\pi}  - |B| cos(\theta) d\theta
+\end{align*}
+
+\begin{align*}
+B \cdot S = B sin(2\pi) 
+\end{align*}
+
+
+
+
+
+
+
+
+
+

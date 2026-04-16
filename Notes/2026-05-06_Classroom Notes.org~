@@ -1,0 +1,80 @@
+#+TITLE: Class Notes
+Ways of calculating "inserting" areas.
+
+* What is the area of an annulus
+ * The simple intuition
+   
+\begin{align*}
+\Delta A = \pi r^2_0 - \pi r^2_i
+\end{align*}
+   
+ * Calculus Derivation
+\begin{align*}
+\Delta A = \pi ( r^2 + r \Delta r + \frac{\Delta r^2}{4}) - \pi ( r^2 - r \Delta r + \frac{\Delta r^2}{4})
+\end{align*}
+\begin{align*}
+\Delta A =2 \pi r \Delta r
+\end{align*}
+
+* Gauss's Law
+Is amazing bro, just appreciate the derivation
+
+\begin{align*}
+\phi_{\text{elec}}= \frac{q}{\epsilon_0}
+\end{align*}
+
+\begin{align*}
+\phi_{\text{elec}} = \int \vec{E} \cdot \hat{n} dA
+\end{align*}
+
+\begin{align*}
+\sum \vec{E} \hat{n} \Delta A = \frac{\sum q}{\epsilon_0}
+\end{align*}
+
+** DONE (WIP) Derivation of E due to a point charge
+SCHEDULED: <2026-04-06 Mon 17:00>
+We know from Gauss's law that the electric flux for a surface is defined to be:
+
+\begin{align*}
+\phi_{\text{elec}} =
+\int \vec{E} \cdot \hat{n} dA
+\end{align*}
+
+And $\phi$ is defined to be $\frac{q}{\epsilon_0}$.
+
+So this makes:
+
+\begin{align*}
+\frac{q}{\epsilon_0} = \int \vec{E} \cdot \hat{n} dA
+\end{align*}
+
+Since we are working with a point charge and the geometry of the electric field is spherical it is only appropriate to calculate is flux perpendicular to it. Making the electric field perpendicular to this surface.
+
+\begin{align*}
+\frac{q}{\epsilon_0} = \vec{E} \int dA \rightarrow \frac{q}{\epsilon_0} = \vec{E} \cdot 4\pi r^2
+\end{align*}
+
+Finally we get the definition of the electric field.
+
+\begin{align*}
+\frac{q}{4\pi \epsilon_0} \frac{\hat{r}}{r^2} = \vec{E}
+\end{align*}
+
+** TODO (WIP) Derivation of E due to a line charge
+SCHEDULED: <2026-04-06 Mon 17:00>
+Similarly to the derivation of the electric field due to a point charge, we will take advantage of the symmetries that we think that the electric field would produce at the surface. In this case, the shape it would best approximate this prediction is the surface area of a cylinder minus its end points.
+
+\begin{align*}
+\frac{q}{\epsilon_0} = \vec{E} \int dA \rightarrow \frac{q}{\epsilon_0} = \vec{E} \cdot 2 \pi r L
+\end{align*}
+
+Rearranging therefore:
+
+\begin{align*}
+\frac{q}{2\pi \epsilon_0} \frac{1}{r L} = \vec{E}
+\end{align*}
+
+
+
+
+

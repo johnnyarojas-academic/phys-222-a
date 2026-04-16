@@ -1,0 +1,69 @@
+#+title: Geometries of Currents and their Effect on the Magnetic Field.
+
+* Magnetic Field of a Straight Wire
+From the derviation of the magnetic field due to a point charge we can get:
+
+\begin{align*}
+B_{wire} = \frac{\mu_0}{4\pi} \frac{ L I} { r \sqrt{r^2 + (L/2)^2} }
+\end{align*}
+where:
+- $r$ is perpendicular the distance between the observation point where the magnetic field is calculated to the wire.
+- $L$ is the length of the wire.
+- $I$ is the current passing through the wire.
+
+if $L >> r$ a good approximation of the magnetic field is:
+\begin{align*}
+B_{wire} \approx \frac{\mu_0}{4\pi} \frac{ 2I }{ r }
+\end{align*}
+
+where:
+- $r$ is perpendicular the distance between the observation point where the magnetic field is calculated to the wire.
+- $I$ is the current passing through the wire.
+
+* Magnitude of the Magnetic Field due to a Circular Loop
+If we ever needed to calculate the magnitude of the magnetic field of a circular loop of current carrying wire, we can use the following expression:
+
+\begin{align*}
+B_{loop} = \frac{\mu_0}{4\pi} \frac{2\pi R^2 I}{ (z^2 + R^2)^{3/2} }
+\end{align*}
+
+Notice that for a circular loop of current carrying wire, the magnetic field always points along the axis of its center of mass. That means that the expression can be used to add multiples of this wires.
+
+In doing so we can construct a good approximation of a solenoid
+
+* Magnitude of the Magnetic Field due to a Long Solenoid
+If we use the previous formula to approximate the sum of various circular loops, we can derive an accurate model of the magnetic field of a solenoid, at the center of the shape the approximation of its magnetic field on the z axis is rather simple for R << L.
+
+\begin{align*}
+B_{z} \approx \frac{\mu_0 N I}{L}
+\end{align*}
+
+* Magnetic Dipole Moment of an Orbiting Electron
+Suppose that each atom has one unpaired electroc that orbits the nucleus along a circular path, at constant speed. Each orbiting electron can be considered to be a tiny current loop that makes a dipole magnetic field.
+
+** Maximum Magnetic Dipole Moment of a Atom
+\begin{align*}
+\mu_{max} = \mu \times N
+\end{align*}
+
+** Magnetic Dipole Moment of a Loop
+
+\begin{align*}
+\mu = I \cdot A
+\end{align*}
+
+
+* Theory
+
+An electrical circuit consisting of a resistor and a capacitor---commonly 
+referred to as an RC circuit---exhibits a fundamentally different behavior 
+from a purely resistive circuit. At the heart of this difference is the 
+capacitor's ability to store charge on its plates. For a capacitor subjected 
+to an electric potential difference $V$, the relationship between the stored 
+charge $Q$ and the voltage is given by:
+
+\begin{align*}
+    Q = CV
+\end{align*}
+
+

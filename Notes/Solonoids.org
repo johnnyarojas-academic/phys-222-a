@@ -1,0 +1,20 @@
+#+title: Solonoids
+
+* Formulas for the Magntic Field in a Solonoid
+** Exact
+The full formula for the magnetic field due to a sonoloid accounting for the complete geometry
+\begin{align*}
+\Delta B_z = \frac{\mu_0}{4\pi} \frac{ 2\pi R^2 I }{ ((d - z)^2 + R^2)^{\frac{3}{2}} } \frac{N}{L}\Delta z
+\end{align*}
+** Aproximation
+This approximation doesnt take into account the edges of the coil
+\begin{align*}
+B_z \approx \frac{\mu_0 N I}{L}
+\end{align*}
+
+* Magnetic Dipole Moment
+\begin{align*}
+B_{axis} = \frac{\mu_0}{4\pi} \frac{2\mu}{r^3}
+\end{align*}
+where:
+- $\mu = IA$

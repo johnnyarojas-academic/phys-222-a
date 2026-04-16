@@ -1,0 +1,39 @@
+#+title: HW 20.5-20.6
+
+* List of Equations for Homework
+** Electric Force
+The electric force is defined mathematically as:
+
+\begin{align*}
+F_{\text{electric}} = q \vec{E}
+\end{align*}
+
+** Magnetic Force
+The magnetic force is defined mathematically as:
+
+\begin{align*}
+F_{\text{magnetic}} = q \vec{v} \times \vec{B}
+\end{align*}
+
+** The Lorentz Force
+The loretnz force equation unites the electric and magnetic interactions into a single mathematical definition:
+
+\begin{align*}
+\vec{F} = q(\vec{E} + v \times \vec{E}) \quad \text{or} \quad \vec{F} = \vec{E}q + qv \times \vec{b} \quad \text{and also} \quad F = F_{\text{electric}} + F_{\text{magnetic}}
+\end{align*}
+
+** Torque on a Magnetic Dipole
+
+\begin{align*}
+\vec{\mu} = IA \quad \text{where the direction of } \mu \text{ is given by the RHR.}
+\end{align*}
+
+\begin{align*}
+\vec{\tau} = \vec{\mu} \times \vec{B}
+\end{align*}
+
+** EMF produced by
+
+\begin{align*}
+\epsilon = \vec{v} \vec{B} L
+\end{align*}

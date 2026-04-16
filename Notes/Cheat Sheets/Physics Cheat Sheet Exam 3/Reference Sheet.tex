@@ -1,0 +1,206 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{multicol}
+\usepackage{parskip}
+
+\geometry{
+  letterpaper,
+  margin=0.45in,
+  top=0.4in,
+  bottom=0.4in
+}
+
+% Custom section: no numbering, blue bold, rule below
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+  {3pt \@plus 1pt \@minus 1pt}%
+  {0.1pt}%
+  {\small\bfseries\color{blue!70!black}}}
+\renewcommand{\@seccntformat}[1]{}  % suppress section numbers
+\makeatother
+
+% Draw rule under section title using \addtocontents trick — simpler: wrap in a command
+\newcommand{\mysection}[1]{%
+  \section{#1}%
+  \noindent\textcolor{blue!50!black}{\rule{\linewidth}{0.4pt}}\vspace{1pt}%
+}
+
+\setlength{\parskip}{1pt}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0.3in}
+
+% Tighten align* vertical spacing globally
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+\setlength{\abovedisplayshortskip}{1pt}
+\setlength{\belowdisplayshortskip}{1pt}
+
+\newcommand{\E}{\vec{E}}
+\newcommand{\B}{\vec{B}}
+\newcommand{\F}{\vec{F}}
+\newcommand{\dV}{\,dV}
+\newcommand{\dl}{\,d\vec{l}}
+\newcommand{\sn}[2]{#1\times10^{#2}}
+
+% Compact equation environment
+\newenvironment{eqbox}{%
+  \begin{mdframed}[linewidth=0.5pt,innerleftmargin=3pt,innerrightmargin=3pt,
+    innertopmargin=2pt,innerbottommargin=2pt,backgroundcolor=blue!4]
+  \small
+}{%
+  \end{mdframed}\vspace{1pt}
+}
+
+\begin{document}
+\footnotesize
+
+{\centering\small\textbf{Physics Exam III --- Equation Sheet}\par
+  \textit{Ch. 16--19 | Matter \& Interactions, Chabay}\par
+  {ID: 0513544}\par}
+\vspace{2pt}
+
+%=============================================================
+\mysection{Core Relationships: $\E$, $V$, and $I$}
+
+\textbf{Electric Field} $\vec{E}$: force per unit charge; points from $+$ to $-$.\\
+\textbf{Potential} $V$: energy per unit charge (scalar).\\
+\textbf{Current} $I$: charge flow per unit time.
+
+\begin{eqbox}
+\textbf{Moving between them:}
+\begin{align*}
+  V_B - V_A &= -\int_A^B \vec{E}\cdot d\vec{l} \quad \text{(path independent)}\\
+  \vec{E} &= -\nabla V \quad \text{(1-D shortcut: } E_x = -dV/dx\text{)}\\
+  I &= \frac{dq}{dt} = nqAv_d \quad \text{\textbf{(Microscopic Current)}}\\
+   &\quad \text{$n$: carrier density, $A$: area, $v_d$: drift speed}\\
+  v_d &= \frac{I}{nqA} \quad \text{(drift speed; typically $\sim$mm/s)}\\
+  \vec{J} &= nq\vec{v}_d \quad \text{(current density [A/m$^2$])}
+\end{align*}
+\end{eqbox}
+
+\textbf{Key signs:} $\Delta V > 0$ moving against $\vec{E}$; $\Delta V < 0$ with $\vec{E}$.\\
+Work by $\vec{E}$: $W = q\,\Delta V = q(V_i - V_f)$.
+
+%=============================================================
+\mysection{Ch. 16 -- Electric Potential \& Potential Energy}
+
+\textit{Potential is a scalar; superpose by addition, not vector sum.}
+
+\begin{eqbox}
+\begin{align*}
+  V &= \frac{1}{4\pi\epsilon_0}\frac{q}{r} \quad \text{(point charge)}\\
+  U &= qV = \frac{1}{4\pi\epsilon_0}\frac{q_1 q_2}{r_{12}} \quad \text{(system PE)}\\
+  \Delta V &= -E\,\Delta x \quad \text{(uniform field)}\\
+  V &= -\int \vec{E}\cdot d\vec{l} \quad \text{(add contributions)}
+\end{align*}
+\end{eqbox}
+
+``Electric Potential'' $\neq$ ``Electric Potential Energy'':\\
+$U = qV$ (energy); $V$ alone is the potential (energy/charge).
+
+%=============================================================
+\mysection{Ch. 16 -- $V$ from $\E$ in Non-Uniform Fields}
+
+\textit{Break path into pieces; $\vec{E}$ may vary along the path.}
+
+\begin{eqbox}
+\begin{align*}
+  \Delta V &= -\int_i^f \vec{E}\cdot d\vec{l} \quad \text{(path independent)}\\
+  V &= \frac{1}{4\pi\epsilon_0}\int \frac{dq}{r} \quad \text{(scalar, easier than } \vec{E}\text{)}
+\end{align*}
+Steps: \textbf{(1)} choose convenient path, \textbf{(2)} express $\vec{E}(l)$,\\
+\textbf{(3)} evaluate $\int \vec{E}\cdot d\vec{l}$, \textbf{(4)} $\Delta V = -$result.
+\end{eqbox}
+
+%=============================================================
+\mysection{Ch. 17 -- Electric Field in Circuits}
+
+\textit{Mobile charges redistribute until steady state; the surface charge gradient creates $\vec{E}$ inside.}
+
+\begin{eqbox}
+\begin{align*}
+  \vec{J} &= \sigma\vec{E} \quad \text{(Ohm, microscopic)}\\
+  V &= IR, \quad R = \frac{\rho L}{A}, \quad \rho = \frac{1}{\sigma} \quad [\Omega\cdot\text{m}]\\
+  v_d &= \frac{I}{nqA}, \quad |\vec{E}| = \frac{V}{L} \quad \text{(uniform)}
+\end{align*}
+\end{eqbox}
+
+In steady state: $\vec{E}_{\perp\text{surface}}=0$ inside conductor; charge resides on surface.
+
+%=============================================================
+\mysection{Ch. 18 -- Circuits: Loop Rule \& Kirchhoff}
+
+\textit{Closed loops conserve energy; junctions conserve charge.}
+
+\begin{eqbox}
+\begin{align*}
+  \sum_{\text{loop}} \Delta V &= 0 \quad \textbf{(KVL -- Loop rule)}\\
+  \sum I_{\text{in}} &= \sum I_{\text{out}} \quad \textbf{(KCL -- Junction rule)}\\
+  R_{\text{eq}} &= \sum R_i \quad \text{(series)}\\
+  \frac{1}{R_{\text{eq}}} &= \sum\frac{1}{R_i} \quad \text{(parallel)}\\
+  P &= IV = I^2R = \frac{V^2}{R} \quad \text{[W]}
+\end{align*}
+\end{eqbox}
+
+Sign convention: $-IR$ across resistor (in current direction); $+\mathcal{E}$ across EMF (negative to positive terminal).
+
+%=============================================================
+\mysection{Ch. 19 -- RC Circuits \& Capacitors}
+
+\textit{Capacitors store charge; RC circuits decay/grow exponentially.}
+
+\begin{eqbox}
+\begin{align*}
+  C &= \frac{Q}{V}, \quad C = \frac{\epsilon_0 A}{d} \quad \text{(parallel-plate)}\\
+  U &= \tfrac{1}{2}CV^2 = \tfrac{Q^2}{2C} \quad \text{(energy stored)}\\
+  Q(t) &= C\mathcal{E}\!\left(1-e^{-t/\tau}\right) \quad \textbf{(charging)}\\
+  Q(t) &= Q_0\,e^{-t/\tau} \quad \textbf{(discharging)}\\
+  \tau &= RC, \quad I(t) = \frac{\mathcal{E}}{R}e^{-t/\tau}
+\end{align*}
+Series: $\dfrac{1}{C_{\text{eq}}}=\sum\dfrac{1}{C_i}$ \quad Parallel: $C_{\text{eq}}=\sum C_i$
+\end{eqbox}
+
+%=============================================================
+\mysection{Constants \& Quick Reference}
+
+\begin{eqbox}
+\begin{align*}
+  \frac{1}{4\pi\epsilon_0} &= \sn{9.0}{9}\ \mathrm{N\cdot m^2/C^2}\\
+  \epsilon_0 &= \sn{8.85}{-12}\ \mathrm{C^2/(N\cdot m^2)}\\
+  e &= \sn{1.6}{-19}\ \mathrm{C}, \quad m_e=\sn{9.1}{-31}\ \mathrm{kg}
+\end{align*}
+\end{eqbox}
+
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+Quantity & SI Unit \\
+\midrule
+$V$ (potential) & V = J/C \\
+$E$ (field) & N/C = V/m \\
+$I$ (current) & A = C/s \\
+$R$ (resistance) & $\Omega$ = V/A \\
+$C$ (capacitance) & F = C/V \\
+$\rho$ (resistivity) & $\Omega\cdot$m \\
+$P$ (power) & W = J/s \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{2pt}
+\textbf{Insulator vs.\ Conductor in $\vec{E}$:}\\
+Conductor (static): $\vec{E}_{\text{inside}}=0$, $V=\text{const}$.\\
+Insulator: $\vec{E}\neq 0$ inside; $\Delta V = \int \vec{E}\cdot d\vec{l} \neq 0$.
+\begin{align*}
+  E_x &= -\frac{dV}{dx} \quad \text{(gradient shortcut, 1-D)}
+\end{align*}
+
+\end{document}

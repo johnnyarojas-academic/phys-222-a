@@ -1,0 +1,334 @@
+#+title: 2026 04 01 Classroom Notes
+
+The test is mainly going to go over the magnetic forces and fields.
+
+** Net electric and magnetic force
+\begin{align*}
+\vec{F} = q(\vec{E} + v \times \vec{E}) \quad \text{or} \quad \vec{F} = \vec{E}q + qv \times \vec{b} \quad \text{and also} \quad F = F_{\text{electric}} + F_{\text{magnetic}}
+\end{align*}
+
+Explains also why charges tend to go on a circle!
+
+** Torque due to a magnetic field
+\begin{align*}
+\vec{\tau} = \vec{\mu} \times \vec{B}
+\end{align*}
+
+** Potential Energy due to a magnetic dipole
+Check summary of chp 22.
+
+\begin{align*}
+F_x = - \frac{d U_m}{dx} = \frac{d( \vec{\mu} \cdot \vec{B}) }{dx}
+\end{align*}
+
+** Definition of the magnetic field
+
+\begin{align*}
+\vec{B} = \frac{\mu_0}{4\pi} \frac{ I \Delta \vec{l} \times \vec{r} }{r^2}
+\end{align*}
+
+An easier way to remember, is that charges that are going fast produce an effect on the surrounding magnetic field.
+
+** Magnetic Field of a Loop
+For a circular loop, the approximation is given on the summary of chp 17
+
+\begin{align*}
+B_{\text{loop}} \approx \frac{\mu_0}{4\pi} \frac{2\mu}{z^3}
+\end{align*}
+
+** Magnetic Field due to a Solonoid
+For a solonoid that has an L comparatevely longer than its radius the magnetic field is defined to be approximately.
+
+\begin{align*}
+B_z \approx \frac{\mu_0 N I}{L}
+\end{align*}
+
+* 21.1 Patterns of Field in Space
+** Symetries
+On a curious note, electric field have some notable simetries that allow them to work by their definitions.
+
+** Analogy: Fluid and Electric Flux
+Lookup comparison and include here
+
+#+BEGIN_SRC python :python ~/envs/physics/bin/python :session math :results output :async
+from vpython import *
+import math
+
+# ── Default Study Variables ────────────────────────────────────────────────────
+NUM_PARTICLES   = 12
+RING_RADIUS     = 3.0
+PARTICLE_RADIUS = 0.2
+CHARGE_E        = -1.0
+ARROW_SCALE     = 1e-10
+ARROW_MIN       = 0.3
+ARROW_MAX       = 3.0
+ARROW_WIDTH     = 0.05
+K_E             = 8.99e9
+MASS            = 9.11e-31
+E_CHARGE        = 1.6e-19
+
+# Log slider ranges
+LOG_CHARGE_MIN      = -4
+LOG_CHARGE_MAX      =  6
+LOG_RADIUS_MIN      = -9
+LOG_RADIUS_MAX      =  1
+LOG_RING_MIN        = -9
+LOG_RING_MAX        =  1
+LOG_ARROW_SCALE_MIN = -15
+LOG_ARROW_SCALE_MAX = -5
+LOG_ARROW_WIDTH_MIN = -4
+LOG_ARROW_WIDTH_MAX =  0
+
+# ── Scene ──────────────────────────────────────────────────────────────────────
+scene.width = 1200
+scene.height = 700
+scene.title = "Electric Field Calculator"
+scene.background = color.black
+
+# ── Helpers ────────────────────────────────────────────────────────────────────
+def log_to_value(log_val):
+    return 10 ** log_val
+
+def value_to_log(val):
+    return math.log10(abs(val))
+
+# ── Charge sign state ──────────────────────────────────────────────────────────
+charge_sign = -1
+
+# ── Build / Rebuild Ring ───────────────────────────────────────────────────────
+particles = []
+
+def build_ring():
+    global particles
+    for p in particles:
+        p.visible = False
+    particles = []
+
+    n      = int(num_slider.value)
+    r      = log_to_value(ring_radius_slider.value)
+    charge = charge_sign * log_to_value(charge_log_slider.value) * E_CHARGE
+    size   = log_to_value(size_log_slider.value)
+
+    for i in range(n):
+        angle = (2 * math.pi / n) * i
+        x = r * math.cos(angle)
+        z = r * math.sin(angle)
+
+        p = sphere(
+            pos=vector(x, 0, z),
+            radius=size,
+            color=color.cyan,
+            emissive=False
+        )
+        p.charge   = charge
+        p.mass     = MASS
+        p.velocity = vector(0, 0, 0)
+        particles.append(p)
+
+# ── Clear Arrows ───────────────────────────────────────────────────────────────
+field_arrows = []
+field_labels = []
+
+def clear_arrows():
+    for a in field_arrows:
+        a.visible = False
+    for l in field_labels:
+        l.visible = False
+    field_arrows.clear()
+    field_labels.clear()
+
+# ── Shared charge readout update ───────────────────────────────────────────────
+def update_charge_readout():
+    real_charge_e = log_to_value(charge_log_slider.value)
+    real_charge_c = charge_sign * real_charge_e * E_CHARGE
+    charge_text.text = f"  {charge_sign * real_charge_e:.2e} e  →  {real_charge_c:.2e} C"
+
+# ── Slider Callbacks ───────────────────────────────────────────────────────────
+def update_num(s):
+    num_text.text = f"  {int(s.value)}"
+    clear_arrows()
+    build_ring()
+
+def update_ring_radius(s):
+    real_r = log_to_value(s.value)
+    ring_radius_text.text = f"  {real_r:.2e} m"
+    clear_arrows()
+    build_ring()
+
+def update_size(s):
+    real_size = log_to_value(s.value)
+    size_text.text = f"  {real_size:.3e} m"
+    for p in particles:
+        p.radius = real_size
+
+def update_charge(s):
+    update_charge_readout()
+    real_charge_c = charge_sign * log_to_value(s.value) * E_CHARGE
+    for p in particles:
+        p.charge = real_charge_c
+    clear_arrows()
+
+def toggle_sign(b):
+    global charge_sign
+    charge_sign *= -1
+    b.text = "Sign: − (negative)" if charge_sign == -1 else "Sign: + (positive)"
+    b.color = color.red if charge_sign == -1 else color.blue
+    update_charge_readout()
+    real_charge_c = charge_sign * log_to_value(charge_log_slider.value) * E_CHARGE
+    for p in particles:
+        p.charge = real_charge_c
+    clear_arrows()
+
+def update_arrow_scale(s):
+    real_scale = log_to_value(s.value)
+    arrow_scale_text.text = f"  {real_scale:.1e}"
+
+def update_arrow_width(s):
+    real_width = log_to_value(s.value)
+    arrow_width_text.text = f"  {real_width:.3e} m"
+    for a in field_arrows:
+        a.shaftwidth = real_width
+        a.headwidth  = real_width * 2
+        a.headlength = real_width * 3
+
+def update_clear(b):
+    clear_arrows()
+
+# ── UI Layout ──────────────────────────────────────────────────────────────────
+scene.append_to_caption("\n\n")
+
+# Number of particles
+scene.append_to_caption("Number of charges:  ")
+num_slider = slider(
+    min=2, max=100, value=NUM_PARTICLES, step=1,
+    length=220, bind=update_num
+)
+num_text = wtext(text=f"  {NUM_PARTICLES}")
+
+scene.append_to_caption("\n\n")
+
+# Ring radius (logarithmic)
+scene.append_to_caption("Ring radius (log):  ")
+ring_radius_slider = slider(
+    min=LOG_RING_MIN, max=LOG_RING_MAX,
+    value=value_to_log(RING_RADIUS), step=0.01,
+    length=220, bind=update_ring_radius
+)
+ring_radius_text = wtext(text=f"  {RING_RADIUS:.2e} m")
+
+scene.append_to_caption("\n\n")
+
+# Sphere radius (logarithmic)
+scene.append_to_caption("Sphere radius (log):")
+size_log_slider = slider(
+    min=LOG_RADIUS_MIN, max=LOG_RADIUS_MAX,
+    value=value_to_log(PARTICLE_RADIUS), step=0.01,
+    length=220, bind=update_size
+)
+size_text = wtext(text=f"  {PARTICLE_RADIUS:.3e} m")
+
+scene.append_to_caption("\n\n")
+
+# Charge magnitude (logarithmic)
+scene.append_to_caption("Charge mag. (log):  ")
+charge_log_slider = slider(
+    min=LOG_CHARGE_MIN, max=LOG_CHARGE_MAX,
+    value=value_to_log(abs(CHARGE_E)), step=0.01,
+    length=220, bind=update_charge
+)
+charge_text = wtext(text=f"  {CHARGE_E:.2e} e  →  {CHARGE_E * E_CHARGE:.2e} C")
+
+scene.append_to_caption("\n\n")
+
+# Sign toggle button
+scene.append_to_caption("Charge sign:        ")
+sign_btn = button(
+    text="Sign: − (negative)",
+    color=color.red,
+    bind=toggle_sign
+)
+
+scene.append_to_caption("\n\n")
+
+# Arrow scale (logarithmic)
+scene.append_to_caption("Arrow scale (log):  ")
+arrow_scale_slider = slider(
+    min=LOG_ARROW_SCALE_MIN, max=LOG_ARROW_SCALE_MAX,
+    value=value_to_log(ARROW_SCALE), step=0.01,
+    length=220, bind=update_arrow_scale
+)
+arrow_scale_text = wtext(text=f"  {ARROW_SCALE:.1e}")
+
+scene.append_to_caption("\n\n")
+
+# Arrow width (logarithmic)
+scene.append_to_caption("Arrow width (log):  ")
+arrow_width_slider = slider(
+    min=LOG_ARROW_WIDTH_MIN, max=LOG_ARROW_WIDTH_MAX,
+    value=value_to_log(ARROW_WIDTH), step=0.01,
+    length=220, bind=update_arrow_width
+)
+arrow_width_text = wtext(text=f"  {ARROW_WIDTH:.3e} m")
+
+scene.append_to_caption("\n\n")
+
+button(text="Clear Arrows", bind=update_clear)
+scene.append_to_caption("\n")
+
+# ── Electric Field ─────────────────────────────────────────────────────────────
+def calculate_efield(point):
+    E = vector(0, 0, 0)
+    for p in particles:
+        r_vec = point - p.pos
+        r_mag = mag(r_vec)
+        if r_mag == 0:
+            continue
+        r_hat = norm(r_vec)
+        E += K_E * p.charge / r_mag**2 * r_hat
+    return E
+
+def place_arrow(evt):
+    click_pos = vector(evt.pos.x, 0, evt.pos.z)
+
+    E = calculate_efield(click_pos)
+    E_mag = mag(E)
+
+    if E_mag == 0:
+        return
+
+    scale = log_to_value(arrow_scale_slider.value)
+    arrow_length = max(ARROW_MIN, min(E_mag * scale, ARROW_MAX))
+    E_direction  = norm(E)
+    current_width = log_to_value(arrow_width_slider.value)
+
+    a = arrow(
+        pos=click_pos,
+        axis=E_direction * arrow_length,
+        shaftwidth=current_width,
+        headwidth=current_width * 2,
+        headlength=current_width * 3,
+        color=color.yellow
+    )
+    l = label(
+        pos=click_pos + vector(0, 0.3, 0),
+        text=f"|E| = {E_mag:.2e} N/C",
+        height=12,
+        color=color.white,
+        box=False,
+        opacity=0
+    )
+
+    field_arrows.append(a)
+    field_labels.append(l)
+
+scene.bind("click", place_arrow)
+
+# ── Initial Ring ───────────────────────────────────────────────────────────────
+build_ring()
+
+while True:
+    rate(100)
+#+END_SRC
+
+#+RESULTS:
+: a4a4d0bf-e45e-412d-bc1f-d5a6044728af

@@ -1,13 +1,13 @@
 #+title: Integrals
-#+BEGIN_SRC emacs-lisp
-(setq python-shell-interpreter "~/envs/physics/bin/python")
-#+END_SRC
 
 #+RESULTS:
 : ~/envs/physics/bin/python
-* ADJKASDSAS
+* Problem
 #+ Problem 1
-#+BEGIN_SRC python :session physics :results raw
+\begin{align*}
+\int_{{{latex(R_1)}}}^{{{latex(R_2)}}}
+\end{align*}
+#+BEGIN_SRC python :python ~/envs/physics/bin/python :session physics :results raw
 from sympy import *
 
 def inline(s):
@@ -27,6 +27,9 @@ inline(
 #+END_SRC
 
 #+RESULTS:
+\[\int_{R_{1}}^{R_{2}} \frac{x^{2}}{\left(h^{2} + x^{2}\right)^{\frac{3}{2}}} \, dx = \frac{R_{1}}{\sqrt{R_{1}^{2} + h^{2}}} - \frac{R_{2}}{\sqrt{R_{2}^{2} + h^{2}}} - \operatorname{asinh}{\left(\frac{R_{1}}{h} \right)} + \operatorname{asinh}{\left(\frac{R_{2}}{h} \right)}\]
+
+
 
 * Test Problem
 #+BEGIN_SRC python :session physics :results raw
@@ -49,3 +52,4 @@ inline(
 #+END_SRC
 
 #+RESULTS:
+\[\int_{i}^{f} - \frac{1}{x} \, dx = \log{\left(\frac{i}{f} \right)}\]
