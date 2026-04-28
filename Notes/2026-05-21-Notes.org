@@ -1,0 +1,33 @@
+#+TITLE: 2026-05-21-Notes
+
+* 23.2 Fields Traveling Through Space
+
+** Acceleration and Electric Fields, Simple Explanation
+The electric field is dependent on the acceleration of the charges, specifically the electric field at a point is related to the distance from the point to the charge and the perpendicular acceleration of the charge to that radius.
+
+* The Poynting Vector tells us about intensity
+
+\begin{equation}
+\vec{S} = \frac{1}{\mu_0} \vec{E} \times \vec{B}
+\end{equation}
+The magnitude of S tells us the power/area (intensity)
+
+\begin{equation}
+|\vec{S}|_{avg} = I
+\end{equation}
+
+Where $I$ is intensity.
+
+*** Example
+Suppose that:
+$\vec{S}_{avg}$ is 900 W/m^2,
+A = 0.75 m^2
+
+
+
+
+
+
+
+
+
