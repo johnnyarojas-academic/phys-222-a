@@ -1,0 +1,4 @@
+from vpython import *
+vec(2,1,5)
+
+
